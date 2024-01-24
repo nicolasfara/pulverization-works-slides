@@ -12,7 +12,7 @@
 #set par(justify: true)
 
 #title-slide(
-  title: "COMMONWEARS Meeting @ Rome",
+  title: "COMMON-WEARS Meeting @ Rome",
   // subtitle: "TBD",
   author: "Nicolas Farabegoli",
   date: "January 26, 2024",
@@ -138,7 +138,7 @@
 
   To estimate the EPI we divided the TDP by the CPU score obtained from PassMark#footnote[https://www.cpubenchmark.net/] and then used these ratios to estimate the relative EPI of the two CPUs, obtaining an $op("EPI")#sub[ratio]$ close to $1:18$.
 
-  We take the EPI estimation for the server CPU from (approximately $10 J$ per instruction)
+  We take the EPI estimation for the server CPU from approximately $10 J$ per instruction
 
   #figure(
     image("figs/simulation-screenshot.png", height: 78%),
@@ -182,7 +182,12 @@
 ]
 
 #slide(title: "AC for Dynamic Reconfiguration")[
+
   We show how Aggregate Computing can provide a suitable programming model for implementing runtime reconfiguration rules for pulverised systems from a global stance.
+
+  We consider a system composed of _thin_ and _thick_ devices, where the former are able to offload their behaviour to the latter.
+
+  The objective is to dynamically relocate the behaviour adapting to changing conditions (e.g., load, latency, bettery etc.).
 
   A reconfiguration policy can be defined as a _function_ returning `Set[Component]` to be executed locally.
 ]
