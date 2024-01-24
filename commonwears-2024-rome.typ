@@ -23,7 +23,7 @@
 #slide[
   = RQs
 
-  / RQ1: How can a pulverised deployment be reconfigured at runtime in a decentralised way to adapt tochanging conditions (load, energy, etc.)?
+  / RQ1: How can a pulverised deployment be reconfigured at runtime in a decentralised way to adapt to changing conditions (load, energy, etc.)?
 
   / RQ2: How can such adaptation be designed to providerelevant benefits over a static allocation?
 
