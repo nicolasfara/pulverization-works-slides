@@ -13,7 +13,7 @@
 
 #title-slide(
   title: "COMMON-WEARS Meeting @ Rome",
-  // subtitle: "TBD",
+  subtitle: "Activities Summary",
   author: "Nicolas Farabegoli",
   date: "January 25, 2024",
 )
