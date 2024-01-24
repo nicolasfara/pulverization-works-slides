@@ -15,7 +15,7 @@
   title: "COMMON-WEARS Meeting @ Rome",
   // subtitle: "TBD",
   author: "Nicolas Farabegoli",
-  date: "January 26, 2024",
+  date: "January 25, 2024",
 )
 
 #new-section-slide("Pulverization: Reconfig. at Runtime")
