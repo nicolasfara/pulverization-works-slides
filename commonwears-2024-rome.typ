@@ -30,7 +30,7 @@
   = Main contributions
 
   + Extend the theoretical framework of pulverisation by adding support for _runtime configuration rules_
-  + Provide a practical framework (called _PulvReAKt_) developed in Kotlin
+  + Provide a practical framework (called _PulvReAKt_ #cite(<nicolas_farabegoli_2024_10535841>)) developed in Kotlin
   + Validate the proposed framework both by simulation and real deployment
 ]
 
@@ -138,7 +138,7 @@
 
   To estimate the EPI we divided the TDP by the CPU score obtained from PassMark#footnote[https://www.cpubenchmark.net/] and then used these ratios to estimate the relative EPI of the two CPUs, obtaining an $op("EPI")#sub[ratio]$ close to $1:18$.
 
-  We take the EPI estimation for the server CPU from approximately $10 J$ per instruction
+  We take the EPI estimation for the server CPU from approximately $10 J$ per instruction#cite(<6629328>).
 
   #figure(
     image("figs/simulation-screenshot.png", height: 78%),
@@ -193,6 +193,8 @@
 ]
 
 #slide(title: "SCR approach")[
+  Reconfiguration approach based on SCR pattern #cite(<PIANINI202144>).
+
   ```scala
   def isThick: Boolean = ... // true if the device is thick
   def offloadWeight: Int = ... // the offload weight
@@ -215,7 +217,7 @@
 ]
 
 #slide(title: "Evaluation")[
-  We have exercised the proposed approach in two network topologies: _Lobster Network_ and _Scale-free Network_.
+  We have exercised the proposed approach in two network topologies: _Lobster Network_ #cite(<Zhou2013>) and _Scale-free Network_ #cite(<Barabasi1999>).
 
   For each topology we have considered different _device load_, and _device failure_.
 
@@ -237,3 +239,5 @@
     caption: "Comparison between the baseline and the proposed approach in a degradation condition."
   )
 ]
+
+#bibliography("bibliography.bib")
