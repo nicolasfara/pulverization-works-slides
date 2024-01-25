@@ -14,7 +14,7 @@
 #title-slide(
   title: "COMMON-WEARS Meeting @ Rome",
   subtitle: "Activities Summary",
-  author: "Nicolas Farabegoli",
+  author: "Nicolas Farabegoli, PhD Student @ UNIBO",
   date: "January 25, 2024",
 )
 
