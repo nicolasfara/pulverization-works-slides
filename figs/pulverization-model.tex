@@ -1,0 +1,91 @@
+\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\usetikzlibrary{arrows,shapes.geometric,positioning,automata,calc}
+\usepackage{amsbsy}
+\begin{document}
+\tikzset{-,
+host/.style={rectangle,draw,line width={1.5pt},inner sep=8pt,
+        outer sep=0, minimum height=1.5cm, minimum width=1.8cm, %text height=0.2cm, 
+        text depth=0.5cm,
+        fill=black!10!white
+    },
+node/.style={rectangle,draw,dotted,line width={1pt}, inner sep=2.5pt,
+        fill=blue!20!white,
+        font=\large
+    },
+nodeA/.style={node,fill=red!20!white},
+nodeB/.style={node,fill=green!20!white},
+nodeC/.style={node,fill=black!30!white},
+nodeD/.style={node,fill=white!20!white},
+plink/.style={line width=2pt},
+llink/.style={dotted,line width=2pt,red},
+hostThin/.style={rectangle,draw,line width={0.5pt},inner sep=10pt,
+        outer sep=0, minimum height=1.1cm, minimum width=1.8cm, %text height=0.2cm, 
+        text depth=0.5cm,
+        fill=black!10!white
+    },
+lnode/.style={node,minimum width=0.55cm,minimum height=0.55cm},
+loglink/.style={->,line width=1.5pt},
+dloglink/.style={<->, line width=1.5pt}
+}
+\def\nm{0.35cm} %nm = node margin offset
+\def\tpscale{0.7}
+\newcommand{\agent}{device}
+\newcommand{\LSens}{\boldsymbol{\sigma}}
+\newcommand{\LComp}{\boldsymbol{\beta}}
+\newcommand{\LComm}{\boldsymbol{\chi}}
+\newcommand{\LAct}{\boldsymbol{\alpha}}
+\newcommand{\LState}{\boldsymbol{\kappa}}
+
+\begin{tikzpicture}% Example:
+    \node[hostThin,minimum width=2.8cm,minimum height=2.8cm, line width=0.05cm]
+			(h1) [label={[yshift=0.35cm]above:{\textbf{logical \agent{}}}}] {};
+
+			\node[lnode] (d1) at (h1.north west) [xshift=\nm,yshift=-\nm,label=above:{behaviour}] {$\LComp$};
+			\node[lnode] (d2) at (h1.north east) [xshift=-\nm,yshift=-\nm,label=above:{communication}] {$\LComm$};
+			\node[lnode] (d3) at (h1.center) [xshift=0,yshift=0,label=right:{state}] {$\LState$};
+			\node[lnode] (d4) at (h1.south west) [xshift=\nm,yshift=\nm,label=below:{sensors}] {$\LSens$};
+			\node[lnode] (d5) at (h1.south east) [xshift=-\nm,yshift=\nm,label=below:{actuators}] {$\LAct$};
+
+			\node[hostThin,minimum width=2.3cm,minimum height=2.3cm,dashed]
+			(h2) [below right=-1cm and 2cm of h1, label={above:{\textbf{neighbour \agent{}}}}] {};
+
+			\node[lnode] (d21) at (h2.north west) [xshift=\nm,yshift=-\nm] {$\LComm$};
+			\node[lnode] (d22) at (h2.north east) [xshift=-\nm,yshift=-\nm] {$\LComp$};
+			\node[lnode] (d23) at (h2.center) [xshift=0,yshift=0] {$\LState$};
+			\node[lnode] (d24) at (h2.south west) [xshift=\nm,yshift=\nm] {$\LSens$};
+			\node[lnode] (d25) at (h2.south east) [xshift=-\nm,yshift=\nm] {$\LAct$};
+
+
+			\node[hostThin,minimum width=2.3cm,minimum height=2.3cm,dashed]
+			(h3) [above right=-1cm and 2cm of h1, label={above:{\textbf{neighbour \agent{}}}}] {};
+
+			\node[lnode] (d31) at (h3.north west) [xshift=\nm,yshift=-\nm] {$\LSens$};
+			\node[lnode] (d32) at (h3.north east) [xshift=-\nm,yshift=-\nm] {$\LComp$};
+			\node[lnode] (d33) at (h3.center) [xshift=0,yshift=0] {$\LState$};
+			\node[lnode] (d34) at (h3.south west) [xshift=\nm,yshift=\nm] {$\LComm$};
+			\node[lnode] (d35) at (h3.south east) [xshift=-\nm,yshift=\nm] {$\LAct$};
+
+			\draw[dloglink] (d1) -- (d3);
+			\draw[dloglink] (d2) -- (d3);
+			\draw[loglink] (d4) -- (d3);
+			\draw[loglink] (d3) -- (d5);
+
+			\draw[dloglink] (d21) -- (d23);
+			\draw[loglink] (d23) -- (d22);
+			\draw[loglink] (d24) -- (d23);
+			\draw[loglink] (d23) -- (d25);
+
+			\draw[loglink] (d31) -- (d33);
+			\draw[dloglink] (d32) -- (d33);
+			\draw[dloglink] (d34) -- (d33);
+			\draw[loglink] (d33) -- (d35);
+
+			\draw[dashed, <->, line width=0.5mm] (d2.south) to [bend right=20] ([xshift=-0.05cm]d21.west);
+			%\draw[loglink] (d21.west) -- (d2.east);
+
+			\draw[dashed, <->, line width=0.5mm] ([xshift=-0.05cm]d34.west) to [bend right=20] (d2.east);
+			% \draw[dashed, ->, line width=1mm] (d2.east) -- (d34.west);
+
+\end{tikzpicture}
+\end{document}

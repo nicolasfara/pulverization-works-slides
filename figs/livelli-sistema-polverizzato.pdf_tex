@@ -1,0 +1,119 @@
+%% Creator: Inkscape 1.3.2 (091e20ef0f, 2023-11-25, custom), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'livelli-sistema-polverizzato.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{598.5bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.49122807)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.76752595,0.36425533){\color[rgb]{0,0,0}\rotatebox{60}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{Application Mgmt.}\\\textit{Layer}\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.76024772,0.11098089){\color[rgb]{0,0,0}\rotatebox{60}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{Infrastructure}\\\textit{Layer}\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.44486216,0.45112782){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\beta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.41353383,0.4047619){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\sigma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.47243108,0.4047619){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\alpha$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.20300752,0.19423559){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\beta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.12781955,0.05388471){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\sigma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.17418546,0.05388471){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\alpha$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.63283208,0.43107769){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\beta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.60150376,0.38596491){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\sigma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.6679198,0.38596491){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\alpha$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.63909774,0.19799499){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\beta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.56015038,0.0914787){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\sigma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.56641604,0.04761905){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\alpha$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.21177945,0.41854637){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\beta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.18045113,0.37468672){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\sigma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.2481203,0.37468672){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\alpha$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.24937343,0.19423559){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\beta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.60401003,0.0952381){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\sigma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.60776942,0.05388471){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\alpha$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.36967419,0.33082707){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\beta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.3358396,0.28696742){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\sigma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.40100251,0.28696742){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\alpha$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.37593985,0.03634085){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\beta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.39223058,0.12656642){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\sigma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.43734336,0.12656642){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\alpha$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.93233083,0.46741855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Physical Link\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.93233083,0.38596491){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Virtual Link\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.93233083,0.30451128){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Host\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.93233083,0.18796992){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Logical Device 1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{livelli-sistema-polverizzato.pdf}}%
+    \put(0.93233083,0.06641604){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Logical Device 2\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

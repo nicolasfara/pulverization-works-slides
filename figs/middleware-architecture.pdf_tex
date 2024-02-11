@@ -1,0 +1,102 @@
+%% Creator: Inkscape 1.3.2 (091e20ef0f, 2023-11-25, custom), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'middleware-architecture.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{438.75bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.68888889)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{middleware-architecture.pdf}}%
+    \put(0.69964933,0.34889472){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Communication\\Manager\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{middleware-architecture.pdf}}%
+    \put(0.39281298,0.34900228){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Deployment Unit\\Control Manager\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{middleware-architecture.pdf}}%
+    \put(0.75042735,0.52478632){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\alpha$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{middleware-architecture.pdf}}%
+    \put(0.63076923,0.52478632){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\sigma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{middleware-architecture.pdf}}%
+    \put(0.69059829,0.52478632){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\beta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{middleware-architecture.pdf}}%
+    \put(0.30769231,0.52478632){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\beta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{middleware-architecture.pdf}}%
+    \put(0.24786325,0.52478632){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\sigma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{middleware-architecture.pdf}}%
+    \put(0.36752137,0.52478632){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\alpha$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{middleware-architecture.pdf}}%
+    \put(0.3609736,0.43198738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{manages}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{middleware-architecture.pdf}}%
+    \put(0.58581949,0.44049673){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{manages}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{middleware-architecture.pdf}}%
+    \put(0.30769231,0.6){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Deployment Unit}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{middleware-architecture.pdf}}%
+    \put(0.69059829,0.6){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Deployment Unit}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{middleware-architecture.pdf}}%
+    \put(0.63237085,0.05770693){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Physical Network\\Communication\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{middleware-architecture.pdf}}%
+    \put(0.34600187,0.05926281){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Network Topology\\Manager\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{middleware-architecture.pdf}}%
+    \put(0.51282051,0.16581197){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Reconfiguration Manager\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{middleware-architecture.pdf}}%
+    \put(0.06163045,0.19666842){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Middleware\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{middleware-architecture.pdf}}%
+    \put(0.06262024,0.54495182){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}User-defined\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{middleware-architecture.pdf}}%
+    \put(0.97367728,0.34153116){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Application\\Management Layer\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{middleware-architecture.pdf}}%
+    \put(0.97528581,0.10932038){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Infrastructure\\Layer\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{middleware-architecture.pdf}}%
+    \put(0.88625979,0.17437609){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Reconfig.\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{middleware-architecture.pdf}}%
+    \put(0.89131966,0.05307692){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Comm.\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{middleware-architecture.pdf}}%
+    \put(0.48181715,0.5256589){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\dotsm$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{middleware-architecture.pdf}}%
+  \end{picture}%
+\endgroup%
