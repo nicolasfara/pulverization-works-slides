@@ -25,7 +25,7 @@
 
   / RQ1: How can a pulverised deployment be reconfigured at runtime in a decentralised way to adapt to changing conditions (load, energy, etc.)?
 
-  / RQ2: How can such adaptation be designed to providerelevant benefits over a static allocation?
+  / RQ2: How can such adaptation be designed to provide relevant benefits over a static allocation?
 
   = Main contributions
 
@@ -34,11 +34,12 @@
   + Validate the proposed framework both by simulation and real deployment
 ]
 
-// #slide(title: "Middleware architecture")[
-//   #figure(
-//     image("figs/pulverization-example.png")
-//   )
-// ]
+#slide(title: "Pulverization Partitioning")[
+  #figure(
+    image("figs/pulverization.png"),
+    caption: "Logic device partitioned into five components and its links to neighbour devices."
+  )
+]
 
 #slide(title: "Pulverization DSL: System Definition")[
   ```kt
@@ -187,7 +188,7 @@
 
   We consider a system composed of _thin_ and _thick_ devices, where the former are able to offload their behaviour to the latter.
 
-  The objective is to dynamically relocate the behaviour adapting to changing conditions (e.g., load, latency, bettery etc.).
+  The objective is to dynamically relocate the behaviour adapting to changing CPU loads of the _thick host_.
 
   A reconfiguration policy can be defined as a _function_ returning `Set[Component]` to be executed locally.
 ]
