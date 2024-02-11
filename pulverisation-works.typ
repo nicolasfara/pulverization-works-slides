@@ -16,7 +16,7 @@
   title: "Pulverisation Platform",
   // subtitle: "Activities Summary",
   author: "Nicolas Farabegoli, PhD Student @ UNIBO",
-  date: "January 25, 2024",
+  date: "February 13, 2024",
 )
 
 #new-section-slide("Pulverization")
