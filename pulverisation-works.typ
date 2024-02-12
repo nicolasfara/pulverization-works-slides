@@ -52,49 +52,68 @@
   - _Multiplatform_ support --- #fa-icon("java", fa-set: "Brands") #fa-icon("js", fa-set: "Brands") #fa-icon("android", fa-set: "Brands") #fa-icon("apple", fa-set: "Brands")
 ]
 
-#slide(title: "Pulverization DSL: System Definition")[
+#slide(title: "Pulverization DSL: System Definition (1)")[
   ```kt
-  object HighCPU : Capability
-  object LowLatencyComm : Capability
-  object EmbeddedDevice : Capability
+  object HighCPU by Capability
+  object LowLatencyComm by Capability
+  object EmbeddedDevice by Capability
 
-  val configuration = pulverizedSystem {
-    device("control-center") {
-      Behavior and State deployableOn HighCPU
-      Communication deployableOn LowLatencyComm
-      Sensors deployableOn EmbeddedDevice
-    }
-    device("iot-sensor") {
-      Behavior deployableOn setOf(HighCPU, EmbeddedDevice)
-      Communication deployableOn LowLatencyComm
-      Sensors and Actuators deployableOn EmbeddedDevice
-    }
-  }
-  ```
-]
+  val smartphone = Host("smartphone", embeddedDevice)
+  val server = Host("server", highCpu, LowLatencyComm)
 
-#slide(title: "Pulverization DSL: Runtime Setup")[
-  ```kt
+  val infrastructure = setOf(smartphone, server)
+
   object HighLoad : ReconfigurationEvent<Double>() {
     override val predicate = { it > 0.90 }
     override val events = cpuLoad()
   }
+
   object LowBattery : ReconfigurationEvent<Double>() {
     override val predicate = { it < 0.20 }
     override val events = batteryLevel()
   }
-  val runtime = pulverizationRuntime(configuration, "iot-sensor", setOf(...)) {
-    DeviceBehaviour() startsOn Server
-    DeviceCommunication() startsOn Server
-    DeviceSensors() startsOn Smartphone
-    DeviceActuators() startsOn Smartphone
-    reconfigurationRules {
-      onDevice {
-          HighLoad reconfigures { Behaviour movesTo Smartphone }
-          LowBattery reconfigures { Behaviour movesTo Server }
-      }
+  ```
+]
+
+#slide(title: "Pulverization DSL: System Definition (2)")[
+  ```kotlin
+  val configuration = pulverization {
+    val controlCenter by logicDevice {
+      withBehavior<ControlBehavior> requires HighCPU
+      withCommunication<ControlComm> requires LowLatencyComm
+      withSensors<ControlSensors> requires EmbeddedDevice
+    }
+    val iotDevice by logicDevice {
+      withBehavior<DeviceBehavior> requires setOf(HighCPU, EmbeddedDevice)
+      withCommunication<DeviceComm> requires LowLatencyComm
+      withSensors<DeviceSensor> requires EmbeddedDevice
+    }
+  // ... continue
+  ```
+]
+
+#slide(title: "Pulverization DSL: Runtime Setup")[
+  ```kotlin
+      deployment(infrastructure, Protocol()) {
+        device(controlCenter) {
+          ControlBehavior() startsOn server
+          ControlComm() startsOn server
+          ControlSensors() startsOn smartphone
+          reconfigurationRules {
+            onDevice { HighLoad reconfigures { ControlBehavior movesTo smartphone } }
+            onDevice { LowBattery reconfigures { ControlBehavior movesTo server } }
+          }
+        }
+        device(iotDevice) { /* configuration */ }
     }
   }
+
+  val outcome = either {
+    val config = configuration.bind()
+    val runtime = PulvreaktRuntime(config, "controlCenter", infrastructure).bind()
+    runtime.start()
+  }
+  // ... error handling with outcome
   ```
 ]
 
