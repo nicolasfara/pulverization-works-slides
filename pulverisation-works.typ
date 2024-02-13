@@ -265,6 +265,27 @@
   )
 ]
 
+#slide(title: "SCR approach")[
+  Reconfiguration approach based on SCR pattern:
+
+  ```scala
+  def isThick: Boolean = ... // true if the device is thick
+  def offloadWeight: Int = ... // the offload weight
+  def cpuCost(): Int = if (isThick) /* cpu load */ else offloadWeight
+
+  def behavior = ... // the local behavior component
+  def main(): Set[Component] = {
+    val potential = G(isThick, cpuCost(), _ + _, cpuCost)
+    val managed: Set[Behavior] = C(potential, _ ++ _, Set(behavior))
+    var load = cpuCost()
+    val runOnThick: Set[Behavior] = localDecision(load)
+    val onLeader = G(isThick, runOnThick, identity(), cpuCost)
+    if (isThick) onLeader
+    else Set(behavior) -- onLeader ++ Set(Sensor, Actuator)
+  }
+  ```
+]
+
 // #slide(title: "Evaluation")[
 //   We have exercised the proposed approach in two network topologies: _Lobster Network_ #cite(<Zhou2013>) and _Scale-free Network_ #cite(<Barabasi1999>).
 
