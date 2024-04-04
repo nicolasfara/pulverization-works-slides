@@ -79,32 +79,30 @@
   - _Multiplatform_ support --- #fa-icon("java", fa-set: "Brands") #fa-icon("js", fa-set: "Brands") #fa-icon("android", fa-set: "Brands") #fa-icon("apple", fa-set: "Brands")
 ]
 
-#slide(title: "Pulverization DSL: System Definition (1)")[
+#slide(title: "Capabilities and Host Definition")[
   ```kt
-  object HighCPU by Capability
-  object LowLatencyComm by Capability
-  object EmbeddedDevice by Capability
+  object HighCPU by Capability          // ----|
+  object LowLatencyComm by Capability   //     |---> Capability Definition
+  object EmbeddedDevice by Capability   // ----|
 
-  val smartphone = Host("smartphone", embeddedDevice)
-  val server = Host("server", highCpu, LowLatencyComm)
-
-  val infrastructure = setOf(smartphone, server)
-
-  object HighLoad : ReconfigurationEvent<Double>() {
-    override val predicate = { it > 0.90 }
-    override val events = cpuLoad()
-  }
-
-  object LowBattery : ReconfigurationEvent<Double>() {
-    override val predicate = { it < 0.20 }
-    override val events = batteryLevel()
-  }
+  val smartphone = Host("smartphone", embeddedDevice) //---| Host Definition
+  val server = Host("server", highCpu, LowLatencyComm)//---/
   ```
+  // object HighLoad : ReconfigurationEvent<Double>() {
+  //   override val predicate = { it > 0.90 }
+  //   override val events = cpuLoad()
+  // }
+
+  // object LowBattery : ReconfigurationEvent<Double>() {
+  //   override val predicate = { it < 0.20 }
+  //   override val events = batteryLevel()
+  // }
+  // ```
 ]
 
 #slide(title: "Pulverization DSL: System Definition (2)")[
   ```kotlin
-  val configuration = pulverization {
+  val configuration = pulverized {
     val controlCenter by logicDevice {
       withBehavior<ControlBehavior> requires HighCPU
       withCommunication<ControlComm> requires LowLatencyComm
@@ -115,73 +113,15 @@
       withCommunication<DeviceComm> requires LowLatencyComm
       withSensors<DeviceSensor> requires EmbeddedDevice
     }
-  // ... continue
+  }
   ```
 ]
 
-#slide(title: "Pulverization DSL: Runtime Setup")[
-  ```kotlin
-      deployment(infrastructure, Protocol()) {
-        device(controlCenter) {
-          ControlBehavior() startsOn server
-          ControlComm() startsOn server
-          ControlSensors() startsOn smartphone
-          reconfigurationRules {
-            onDevice { HighLoad reconfigures { ControlBehavior movesTo smartphone } }
-            onDevice { LowBattery reconfigures { ControlBehavior movesTo server } }
-          }
-        }
-        device(iotDevice) { /* configuration */ }
-    }
-  }
-
-  val outcome = either {
-    val config = configuration.bind()
-    val runtime = PulvreaktRuntime(config, "controlCenter", infrastructure).bind()
-    runtime.start()
-  }
-  // ... error handling with outcome
-  ```
+#slide(title: "TODO")[
+  Add missing code with reconfiguration
 ]
 
-// #slide(title: "Large-Scale Scenario: Collective Computation at a Urban Event")[
-//   To show the potential of the automatic reconfiguration of the system, we simulated a large-scale scenario.
-
-//   We simulated a _City Event_ where the participants are involved in a collective activity whose computational weight is relevant (similar to Pokemon Go#footnote[https://pokemongolive.com/]).
-
-//   The application requires physically moving into the city reaching _Points of Interest_ (PoI) and performs some operations there.
-
-//   We suppose the application to be pulverised and its behaviour to be able to run either on a _Smartphone_ or in the _Cloud_.
-// ]
-
-// #slide(title: "Metrics")[
-//   For each simulated scenario, we define two changing threshold at which the system is reconfigured: $italic(v)$ and $italic(lambda)$ (stable configuration have $italic(v) > italic(lambda)$)
-
-//   When $italic(v), italic(lambda) < 0$ force the behaviour to be always in the cloud,
-//   and when $italic(v) < 0, italic(lambda)$ forcing the behaviour to be always on the smartphone.
-
-//   We are interested in the following metrics:
-
-//   - $P#sub[device]  (op("kW"))$, the average power consumption of the device
-//   - $P#sub[cloud]  (op("kW"))$, the average power consumption of the cloud
-//   - $op("Distance") (op("km"))$, the total distance travelled by the participants
-//   - $op("$")#sub[cloud] (op("$"))$, the price paid to keep the required cloud instances up and running
-// ]
-
-// #slide(title: "Energy and Cost Models")[
-//   We assume that the power consumption of the device is linearly dependent on the CPU usage, and we thus decided to estimate the Energy Per Instruction (EPI) for the _Smartphone_ and the _Cloud_.
-
-//   In this scenario we considered a Qualcomm Snapdragon 888 (5W) and an Intel Xeon Platinum P-8124 (220W).
-
-//   To estimate the EPI we divided the TDP by the CPU score obtained from PassMark#footnote[https://www.cpubenchmark.net/] and then used these ratios to estimate the relative EPI of the two CPUs, obtaining an $op("EPI")#sub[ratio]$ close to $1:18$.
-
-//   We take the EPI estimation for the server CPU from approximately $10 J$ per instruction#cite(<6629328>).
-
-//   #figure(
-//     image("figs/simulation-screenshot.png", height: 78%),
-//     caption: "A snapshot of the large-scale simulation."
-//   )
-// ]
+#focus-slide("What about dynamic changing conditions?")
 
 #slide(title: "City Event Simulated Scenario")[
   #figure(
