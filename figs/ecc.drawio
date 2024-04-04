@@ -1,0 +1,64 @@
+<mxfile host="Electron" modified="2024-04-04T16:46:01.327Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="-ZvautB1kcSTgWtXMld7" version="24.0.4" type="device">
+  <diagram name="Page-1" id="E5VSdcX2yETw0aMv6OH0">
+    <mxGraphModel dx="1430" dy="856" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-1" value="" style="rounded=0;whiteSpace=wrap;gradientColor=#23373B;gradientDirection=west;strokeColor=default;" parent="1" vertex="1">
+          <mxGeometry x="4" y="555" width="820" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-2" value="" style="ellipse;shape=cloud;whiteSpace=wrap;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="51" y="445" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-3" value="" style="verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=3;strokeColor=#23373B;shadow=0;dashed=0;shape=mxgraph.ios7.icons.smartphone;" parent="1" vertex="1">
+          <mxGeometry x="585" y="452.5" width="30" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-4" value="" style="verticalLabelPosition=bottom;verticalAlign=top;align=center;strokeColor=none;fillColor=#23373B;shape=mxgraph.azure.computer;pointerEvents=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="450" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-5" value="" style="pointerEvents=1;shadow=0;dashed=0;strokeColor=none;fillColor=#23373B;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.cluster;" parent="1" vertex="1">
+          <mxGeometry x="248" y="453.3" width="102.8" height="56.7" as="geometry" />
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-6" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#23373B;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.iot_thing_temperature_sensor;" parent="1" vertex="1">
+          <mxGeometry x="715" y="451" width="58" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-7" value="Edge-Cloud Continuum Eterogenity" style="text;align=center;verticalAlign=middle;rounded=0;fontSize=25;fontColor=#23373B;fontStyle=3" parent="1" vertex="1">
+          <mxGeometry x="207" y="393" width="414" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-9" value="" style="endArrow=none;dashed=1;dashPattern=1 2;strokeWidth=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="458.86" y="547.5" as="sourcePoint" />
+            <mxPoint x="459" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-10" value="" style="endArrow=none;dashed=1;dashPattern=1 2;strokeWidth=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="599.86" y="549" as="sourcePoint" />
+            <mxPoint x="600" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-11" value="" style="endArrow=none;dashed=1;dashPattern=1 2;strokeWidth=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="743.9200000000001" y="549" as="sourcePoint" />
+            <mxPoint x="744" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-12" value="" style="endArrow=none;dashed=1;dashPattern=1 2;strokeWidth=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="299.20000000000005" y="549" as="sourcePoint" />
+            <mxPoint x="299" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-13" value="" style="endArrow=none;dashed=1;dashPattern=1 2;strokeWidth=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110.66000000000005" y="550" as="sourcePoint" />
+            <mxPoint x="111" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E3ByQA4SWDcehhctSZ2T-14" value="Computational Resources Continuum" style="text;align=center;verticalAlign=middle;rounded=0;fontColor=#FFFFFF;fontSize=18;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="318" y="562.5" width="191" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

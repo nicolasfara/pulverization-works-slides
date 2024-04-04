@@ -3,31 +3,58 @@
 
 #import themes.metropolis: *
 
-#set page(paper: "presentation-16-9")
-#show raw: set text(size: 10pt)
-#show math.equation: set text(font: "Fira Math")
-#show figure.caption: set text(size: 16pt)
+#show: metropolis-theme.with(
+  aspect-ratio: "16-9",
+  // footer: [Optional Footnote]
+)
 
-#set text(font: "Fira Sans", weight: "light", size: 24pt)
-#set strong(delta: 500)
+#set text(font: "Inter", weight: "light", size: 20pt)
+#show math.equation: set text(font: "Fira Math")
+#set strong(delta: 150)
 #set par(justify: true)
+
+#set raw(tab-size: 4)
+#show raw.where(block: true): block.with(
+  fill: luma(240),
+  inset: 1em,
+  radius: 0.7em,
+  width: 100%,
+)
+
+// #set page(paper: "presentation-16-9")
+// #show raw: set text(size: 10pt)
+// #show math.equation: set text(font: "Fira Math")
+// #show figure.caption: set text(size: 16pt)
+
+// #set text(font: "Fira Sans", weight: "light", size: 21pt)
+// #set strong(delta: 500)
+// #set par(justify: true)
 
 #title-slide(
   title: "Pulverisation Platform",
   // subtitle: "Activities Summary",
   author: "Nicolas Farabegoli, PhD Student @ UNIBO",
-  date: "February 13, 2024",
+  date: datetime.today().display("[day] [month repr:long] [year]"),
 )
 
 #new-section-slide("Pulverization")
 
-#slide(title: "The infrastructure heterogeneity problem")[
-  Typical _Aggregate Computing_ programs are deployed on a single device in mostly homogeneous infrastructures.
+#slide(title: "Infrastructure heterogeneity problem")[
+  _Macro_-programs are typically deployed on mostly *homogeneous* infrastructures.
 
-  Modern infrastructures (e.g. E-CC) come with a wide range of devices with different _*capabilities*_ and _*constraints*_.
+  The *ECC* is characterized by a wide range of _devices_ with different _*capabilities*_ and _*constraints*_ complicating the deployment of the full program on a _single device_. 
 
-  #quote[Which partitioning model can be used to deploy a program on _heterogeneous infrastructures_?]
+  // #quote[Which partitioning model can be used to deploy a program on _heterogeneous infrastructures_?]
+
+  #pad(
+    top: 0.75em,
+    figure(
+      image("figs/ecc.svg"),
+    )
+  )
 ]
+
+#focus-slide("Which partitioning model?")
 
 #slide(title: "Pulverization Partitioning")[
   #figure(
