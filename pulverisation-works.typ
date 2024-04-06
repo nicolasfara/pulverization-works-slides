@@ -13,6 +13,10 @@
 #set strong(delta: 150)
 #set par(justify: true)
 
+#set quote(block: true)
+#show quote: set align(left)
+#show quote: set pad(x: 5em)
+
 #set raw(tab-size: 4)
 #show raw.where(block: true): block.with(
   fill: luma(240),
@@ -31,26 +35,52 @@
 // #set par(justify: true)
 
 #title-slide(
-  title: "Pulverisation Platform",
+  title: "Opportunistic Deployment and Runtime Execution in the Edge-Cloud Continuum",
   // subtitle: "Activities Summary",
   author: "Nicolas Farabegoli, PhD Student @ UNIBO",
   date: datetime.today().display("[day] [month repr:long] [year]"),
 )
 
-#new-section-slide("Pulverization")
+#new-section-slide("What is the Edge-Cloud Continuum?")
+
+#slide(title: [Cloud Continuum: The Definition #cite(label("DBLP:journals/access/MoreschiniPLNHT22"))])[
+  #quote(attribution: [Gupta et al. #cite(label("DBLP:journals/corr/GuptaNCG16"))])[
+    "_A continuum of resources available from the network edge to the cloud/datacenter_"
+  ]
+
+  #quote(attribution: [Balouek-Thomert et al. #cite(label("DBLP:conf/sc/Balouek-Thomert21"))])[
+    "_Aggregation of heterogeneous resources along the data path from Edge to the Cloud_"
+  ]
+
+  #align(center)[
+    #pad(x: 1.5em)[
+      #text(size: 24pt)[
+        "*_Heterogeneous computational resources opportunistically exploitable from the Edge to the Cloud_*"
+      ]
+    ]
+  ]
+]
 
 #slide(title: "Infrastructure heterogeneity problem")[
-  _Macro_-programs are typically deployed on mostly *homogeneous* infrastructures.
+  _Macroprograms_ #cite(label("DBLP:journals/csur/Casadei23")) are typically deployed on mostly *homogeneous* infrastructures.
 
-  The *ECC* is characterized by a wide range of _devices_ with different _*capabilities*_ and _*constraints*_ complicating the deployment of the full program on a _single device_. 
-
-  // #quote[Which partitioning model can be used to deploy a program on _heterogeneous infrastructures_?]
+  *ECC* resources are _heterogeneous_ imposing different _*capabilities*_ and _*constraints*_.
 
   #pad(
-    top: 0.75em,
+    top: 0.7em,
     figure(
       image("figs/ecc.svg"),
     )
+  )
+]
+
+#slide(title: "One size does not fit all")[
+  It is not always possible to deploy the same _macroprogram_ on a *single device*.
+
+  #h(0.2em)
+
+  #figure(
+    image("figs/from-macro-to-components.svg", width: 70%),
   )
 ]
 
@@ -63,9 +93,9 @@
   )
 ]
 
-#slide(title: "Application and Infrastructure Mapping")[
+#slide(title: "Layers Mapping")[
   #figure(
-    image("figs/two-layer-pulverization.svg")
+    image("figs/system-abstraction-layer.svg")
   )
 ]
 
@@ -80,48 +110,76 @@
 ]
 
 #slide(title: "Capabilities and Host Definition")[
+  === Capability Definition
+
   ```kt
-  object HighCPU by Capability          // ----|
-  object LowLatencyComm by Capability   //     |---> Capability Definition
-  object EmbeddedDevice by Capability   // ----|
-
-  val smartphone = Host("smartphone", embeddedDevice) //---| Host Definition
-  val server = Host("server", highCpu, LowLatencyComm)//---/
+  object HighMemory by Capability
+  object MqttBroker by Capability
+  object WithTemperatureSensor by Capability
   ```
-  // object HighLoad : ReconfigurationEvent<Double>() {
-  //   override val predicate = { it > 0.90 }
-  //   override val events = cpuLoad()
-  // }
 
-  // object LowBattery : ReconfigurationEvent<Double>() {
-  //   override val predicate = { it < 0.20 }
-  //   override val events = batteryLevel()
-  // }
-  // ```
+  === Host Definition
+
+  ```kt
+  val embeddedDevice = Host("raspberry", WithTemperatureSensor)
+  val cloudServer = Host("AWS", HighMemory, MqttBroker)
+  ```
 ]
 
-#slide(title: "Pulverization DSL: System Definition (2)")[
-  ```kotlin
+#slide(title: "Pulverized System")[
+
+  === System Definition
+
+  ```kt
+  class TemperatureCollector : Behavior { ... }
+  class PeerToPeerComm : Communication { ... }
+  class TemperatureSensor : Sensor { ... }
+
   val configuration = pulverized {
-    val controlCenter by logicDevice {
-      withBehavior<ControlBehavior> requires HighCPU
-      withCommunication<ControlComm> requires LowLatencyComm
-      withSensors<ControlSensors> requires EmbeddedDevice
-    }
-    val iotDevice by logicDevice {
-      withBehavior<DeviceBehavior> requires setOf(HighCPU, EmbeddedDevice)
-      withCommunication<DeviceComm> requires LowLatencyComm
-      withSensors<DeviceSensor> requires EmbeddedDevice
+    val temperatureDevice by logicDevice {
+      withBehavior<TemperatureCollector> requires HighCPU
+      withCommunication<PeerToPeerComm> requires LowLatencyComm
+      withSensors<TemperatureSensor> requires WithTemperatureSensor
     }
   }
   ```
 ]
 
-#slide(title: "TODO")[
-  Add missing code with reconfiguration
+#focus-slide("What about dynamic changing conditions?")
+
+#slide(title: "Local Reconfiguration Rules")[
+  === Rules Definition
+
+  ```kt
+  object HighLoad : ReconfigurationEvent<Double>() {
+    override val reconfigureWhen = { it > 0.90 }
+    override val events = cpuLoad()
+  }
+
+  object LowBattery : ReconfigurationEvent<Double>() {
+    override val reconfigureWhen = { it < 0.20 }
+    override val events = batteryLevel()
+  }
+  ```
 ]
 
-#focus-slide("What about dynamic changing conditions?")
+#slide(title: "TODO")[
+  ```kt
+  val configuration = pulverized {
+    val temperatureDevice by { ... } // as before
+    deployment {
+      device(temperatureDevice) {
+        TemperatureCollector() startsOn embeddedDevice
+        PeerToPeerComm() startsOn cloudServer
+        TemperatureSensor() startsOn embeddedDevice
+        HighLoad reconfigures { TemperatureCollector to embeddedDevice }
+        LowBattery reconfigures { TemperatureCollector to cloudServer }
+      }
+    }
+  }
+  ```
+]
+
 
 #slide(title: "City Event Simulated Scenario")[
   #figure(
@@ -291,4 +349,6 @@
   )
 ]
 
-// #bibliography("bibliography.bib")
+#slide[
+  #bibliography("bibliography.bib")
+]
