@@ -18,6 +18,7 @@
 #show quote: set pad(x: 5em)
 
 #set raw(tab-size: 4)
+#set raw(syntaxes: "Kotlin.sublime-syntax")
 #show raw.where(block: true): block.with(
   fill: luma(240),
   inset: 1em,
@@ -126,11 +127,11 @@
   ```
 ]
 
-#slide(title: "Pulverized System")[
+#slide(title: "Mapping Components Over Device Types")[
 
   === System Definition
 
-  ```kt
+  ```kotlin
   class TemperatureCollector : Behavior { ... }
   class PeerToPeerComm : Communication { ... }
   class TemperatureSensor : Sensor { ... }
@@ -163,7 +164,7 @@
   ```
 ]
 
-#slide(title: "TODO")[
+#slide(title: "Initial Configuration and Reconfiguration Rules")[
   ```kt
   val configuration = pulverized {
     val temperatureDevice by { ... } // as before
@@ -180,13 +181,17 @@
   ```
 ]
 
-
 #slide(title: "City Event Simulated Scenario")[
+  #align(center)[
+    #alert[
+      Can we _tradeoff_ between *cloud costs* and *device consumption* via relocation?
+    ]
+  ]
+
   #figure(
-    image("figs/simulation-screenshot.png"),
+    image("figs/simulation-screenshot.png", width: 55%),
     // caption: "A snapshot of the large-scale simulation."
   )
-
 ]
 
 #slide(title: "Simulation Results")[
@@ -196,7 +201,30 @@
   )
 ]
 
-#new-section-slide("AC for Reconfiguration")
+#slide(title: "Oscillatory Conditions")[
+  #table(
+    columns: (1fr, auto),
+    align: horizon,
+    stroke: none,
+    inset: 1em,
+    [
+      #alert[
+        What happens when the server is *overloaded* and a device is running *out of battery*?
+      ]
+
+      #uncover("2")[
+        The _behavior_ component starts to be *continuously* relocated between the `EmbeddedDevice` and the `CloudServer`.
+      ]
+    ],
+    [
+      #figure(
+        image("figs/s-unstable.gif")
+      )
+    ]
+  )
+]
+
+#new-section-slide("Global Reconfiguration Rules")
 
 #slide(title: "From Local to Global Reconfiguration Rules")[
   Local reconfiguration rules:
@@ -220,134 +248,69 @@
   // )
 ]
 
-// #slide(title: "AC for Dynamic Reconfiguration")[
+#slide(title: "Self-Integration")[
+  Global reconfiguration rules via *Self-integration* #cite(label("DBLP:journals/fgcs/BellmanDT21")) by using the _Self-organising Coordination Regions_ pattern #cite(label("PIANINI202144")):
 
-//   We show how Aggregate Computing can provide a suitable programming model for implementing runtime reconfiguration rules for pulverised systems from a global stance.
-
-//   We consider a system composed of _thin_ and _thick_ devices, where the former are able to offload their behaviour to the latter.
-
-//   The objective is to dynamically relocate the behaviour adapting to changing CPU loads of the _thick host_.
-
-//   A reconfiguration policy can be defined as a _function_ returning `Set[Component]` to be executed locally.
-// ]
-
-// #slide(title: "SCR approach")[
-//   Reconfiguration approach based on SCR pattern #cite(<PIANINI202144>).
-
-//   ```scala
-//   def isThick: Boolean = ... // true if the device is thick
-//   def offloadWeight: Int = ... // the offload weight
-//   def cpuCost(): Int = if (isThick) /* cpu load */ else offloadWeight
-
-//   def behavior = ... // the local behavior component
-//   def main(): Set[Component] = {
-//     val potential =
-//       G(source = isThick, field = cpuCost(), acc = _ + _, metric = cpuCost)
-//     val managed: Set[Behavior] = C(potential, _ ++ _, Set(behavior))
-//     var load = cpuCost()
-//     val runOnThick: Set[Behavior] =
-//       if (isThick) managed.takeWhile { load += offloadWeight; load < 100 }
-//       else Set()
-//     val onLeader = G(isThick, runOnThick, identity(), cpuCost)
-//     if (isThick) onLeader
-//     else Set(behavior) -- onLeader ++ Set(Sensor, Actuator)
-//   }
-//   ```
-// ]
-
-#slide(title: "SCR-based Reconfiguration Rules")[
-  _*Self-organising Coordination Regions*_ (SCR) pattern for reconfiguration.
-
-  - Infrastructure division into *regions*
-  - Regions coordinated by a *leader*
-  - Leaders computation of *Region-based* components allocation
-  - Propagation of the *actual configuration* to region devices
+  - Structure interacting heterogeneous resources into groups (regions)
+  - Each region solves _cooperatively_ a specific problem (e.g., load balancing)
+  - We ensure continuous and context-sensitive adaptation of the system
 
   #figure(
     image("figs/scr-pattern-reconfiguration.svg"),
   )
 ]
 
-#slide(title: "SCR pattern - Variable Load")[
-  #figure(
-    stack(
-      dir: ltr,
-      spacing: 2em,
-      image("figs/ac-reconfiguration-1-variable.png"),
-      image("figs/ac-reconfiguration-2-variable.png"),
-    )
+#slide(title: "Global Reconfiguration Rule: Variable Load")[
+  #table(
+    columns: (1fr, 1fr),
+    inset: 0.5em,
+    stroke: none,
+    [
+      #figure(
+        image("figs/dynamic-load-vertical.svg"),
+      )
+    ],
+    [
+      #stack(dir: ttb)[
+        #figure(image("figs/barabasi-albert.png", width: 40%))
+        #figure(image("figs/lobster.png", width: 40%))
+      ]
+    ]
   )
 ]
 
-#slide(title: "SCR pattern - Node Failures")[
-  #figure(
-    stack(
-      dir: ltr,
-      spacing: 2em,
-      image("figs/ac-reconfiguration-1-drop.png"),
-      image("figs/ac-reconfiguration-2-drop.png"),
-    )
+#slide(title: "Global Reconfiguration Rule: Graceful Degradation")[
+  #table(
+    columns: (1fr, 1fr),
+    inset: 0.5em,
+    stroke: none,
+    [
+      #figure(
+        image("figs/constant-load-vertical.svg"),
+      )
+    ],
+    [
+      #stack(dir: ttb)[
+        #figure(image("figs/barabasi-albert.png", width: 40%))
+        #figure(image("figs/lobster.png", width: 40%))
+      ]
+    ]
   )
 ]
 
-#slide(title: "SCR approach")[
-  Reconfiguration approach based on SCR pattern:
+// #new-section-slide("Work in Progress")
 
-  ```scala
-  def isThick: Boolean = ... // true if the device is thick
-  def offloadWeight: Int = ... // the offload weight
-  def cpuCost(): Int = if (isThick) /* cpu load */ else offloadWeight
-
-  def behavior = ... // the local behavior component
-  def main(): Set[Component] = {
-    val potential = G(isThick, cpuCost(), _ + _, cpuCost)
-    val managed: Set[Behavior] = C(potential, _ ++ _, Set(behavior))
-    var load = cpuCost()
-    val runOnThick: Set[Behavior] = localDecision(load)
-    val onLeader = G(isThick, runOnThick, identity(), cpuCost)
-    if (isThick) onLeader
-    else Set(behavior) -- onLeader ++ Set(Sensor, Actuator)
-  }
-  ```
-]
-
-// #slide(title: "Evaluation")[
-//   We have exercised the proposed approach in two network topologies: _Lobster Network_ #cite(<Zhou2013>) and _Scale-free Network_ #cite(<Barabasi1999>).
-
-//   For each topology we have considered different _device load_, and _device failure_.
-
-//   In all the experiments we have measured the $"QoS" = frac(tau#sub("0"), tau)$ of the system where $tau$ is the _thin_ and _thick_ device that have successfully offloaded their behaviour. The set of device that have failed to offload their behaviour is $tau#sub[0] subset.eq tau$.
-
-//   The baseline we compare with is a system where offloading is pre-defined: every thin host offloads its behaviour component to the nearest thick host.
+// #slide(title: "Coordination of Multi-tier Field-based Applications")[
+//   #figure(
+//     image("figs/macro-system-definition.svg")
+//   )
 // ]
 
-#slide(title: "Results - Varaible Load")[
-  #figure(
-    image("figs/dynamic-load.svg"),
-    // caption: "Comparison between the baseline and the proposed approach with variable load."
-  )
-]
-
-#slide(title: "Results - Graceful Degradation")[
-  #figure(
-    image("figs/constant-load.svg"),
-    // caption: "Comparison between the baseline and the proposed approach in a degradation condition."
-  )
-]
-
-#new-section-slide("Work in Progress")
-
-#slide(title: "Coordination of Multi-tier Field-based Applications")[
-  #figure(
-    image("figs/macro-system-definition.svg")
-  )
-]
-
-#slide(title: "Deployment Mapping")[
-  #figure(
-    image("figs/deployment-mapping-diagram-img.svg")
-  )
-]
+// // #slide(title: "Deployment Mapping")[
+// //   #figure(
+// //     image("figs/deployment-mapping-diagram-img.svg")
+// //   )
+// // ]
 
 #slide[
   #bibliography("bibliography.bib")
