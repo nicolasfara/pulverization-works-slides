@@ -5,9 +5,9 @@
    version="1.1"
    id="svg1"
    width="860.82251"
-   height="581.41467"
-   viewBox="0 0 860.82251 581.41467"
-   sodipodi:docname="cloud_cost-device_consumption-cloud_consumption-distance-device=1000.svg"
+   height="651.41498"
+   viewBox="0 0 860.82251 651.41498"
+   sodipodi:docname="cloud_cost-device_consumption-cloud_consumption-distance-device=1000-1.svg"
    inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -241,11 +241,11 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.9813741"
-     inkscape:cx="430.25695"
-     inkscape:cy="290.70734"
-     inkscape:window-width="3440"
-     inkscape:window-height="1356"
+     inkscape:zoom="1.5507884"
+     inkscape:cx="304.03889"
+     inkscape:cy="242.45731"
+     inkscape:window-width="3840"
+     inkscape:window-height="2050"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -256,7 +256,7 @@
        inkscape:label="1"
        id="page1"
        width="860.82251"
-       height="581.41467"
+       height="651.41498"
        margin="0"
        bleed="0"
        inkscape:export-filename="cloud_cost-device_consumption-cloud_consumption-distance-device=1000.0.svg"
@@ -798,37 +798,37 @@
        id="path75"
        d="M 89.960198,31.2 H 113.17437 V 296.33298 H 89.960198 Z"
        style="fill:#fde725;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       transform="matrix(1.3333333,0,0,-1.3333333,0,581.41467)"
+       transform="matrix(1.3333333,0,0,-1.616257,0,591.95453)"
        clip-path="url(#clipPath76)" />
     <path
        id="path77"
        d="m 167.34078,31.2 h 23.21418 v 287.43231 h -23.21418 z"
        style="fill:#fde725;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       transform="matrix(1.3333333,0,0,-1.3333333,0,581.41467)"
+       transform="matrix(1.3333333,0,0,-1.01774,0,571.56816)"
        clip-path="url(#clipPath78)" />
     <path
        id="path79"
        d="m 244.72137,31.2 h 23.21417 v 290.27531 h -23.21417 z"
        style="fill:#fde725;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       transform="matrix(1.3333333,0,0,-1.3333333,0,581.41467)"
+       transform="matrix(1.3333333,0,0,-0.7903549,0,564.47374)"
        clip-path="url(#clipPath80)" />
     <path
        id="path81"
        d="m 322.10195,31.2 h 23.21418 v 300.82169 h -23.21418 z"
        style="fill:#fde725;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       transform="matrix(1.3333333,0,0,-1.3333333,0,581.41467)"
+       transform="matrix(1.3333333,0,0,-0.59145597,0,558.2681)"
        clip-path="url(#clipPath82)" />
     <path
        id="path83"
        d="m 399.48254,31.2 h 23.21418 v 302.31249 h -23.21418 z"
        style="fill:#fde725;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       transform="matrix(1.3333333,0,0,-1.3333333,0,581.41467)"
+       transform="matrix(1.3333333,0,0,-0.55669849,0,557.18366)"
        clip-path="url(#clipPath84)" />
     <path
        id="path85"
        d="M 476.86313,31.2 H 500.0773 V 348 h -23.21417 z"
        style="fill:#fde725;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       transform="matrix(1.3333333,0,0,-1.3333333,0,581.41467)"
+       transform="matrix(1.3333333,0,0,-0.35098773,0,550.76549)"
        clip-path="url(#clipPath86)" />
     <path
        id="path87"
@@ -996,57 +996,69 @@
     <text
        id="text102"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,123.53763,184.07486)"><tspan
-         style="font-variant:normal;font-weight:normal;font-size:8px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0 5.0879998 10.176 12.72"
-         y="0"
+       x="123.53763"
+       y="110.07486"
+       style="font-size:16px;stroke-width:1.33333"><tspan
+         style="font-variant:normal;font-weight:normal;font-size:10.6667px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
+         x="123.53763"
          sodipodi:role="line"
-         id="tspan102">14.0</tspan></text>
+         id="tspan102"
+         y="110.07486">16.9</tspan></text>
     <text
        id="text103"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,226.71175,154.34243)"><tspan
-         style="font-variant:normal;font-weight:normal;font-size:8px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0 5.0879998 10.176 12.72"
-         y="0"
+       x="226.71175"
+       y="244.34242"
+       style="font-size:16px;stroke-width:1.33333"><tspan
+         style="font-variant:normal;font-weight:normal;font-size:10.6667px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
+         x="226.71175"
+         y="244.34242"
          sodipodi:role="line"
-         id="tspan103">15.2</tspan></text>
+         id="tspan103">12.4</tspan></text>
     <text
        id="text104"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,329.88586,150.55175)"><tspan
-         style="font-variant:normal;font-weight:normal;font-size:8px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0 5.0879998 10.176 12.72"
-         y="0"
+       x="333.88586"
+       y="306.55176"
+       style="font-size:16px;stroke-width:1.33333"><tspan
+         style="font-variant:normal;font-weight:normal;font-size:10.6667px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
          sodipodi:role="line"
-         id="tspan104">15.4</tspan></text>
+         id="tspan104"
+         x="333.88586"
+         y="306.55176">9.7</tspan></text>
     <text
        id="text105"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,433.05997,136.48992)"><tspan
-         style="font-variant:normal;font-weight:normal;font-size:8px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0 5.0879998 10.176 12.72"
-         y="0"
+       x="437.05997"
+       y="358.48993"
+       style="font-size:16px;stroke-width:1.33333"><tspan
+         style="font-variant:normal;font-weight:normal;font-size:10.6667px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
+         x="437.05997"
+         y="358.48993"
          sodipodi:role="line"
-         id="tspan105">15.9</tspan></text>
+         id="tspan105">7.4</tspan></text>
     <text
        id="text106"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,536.23409,134.50218)"><tspan
-         style="font-variant:normal;font-weight:normal;font-size:8px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0 5.0879998 10.176 12.72"
-         y="0"
+       x="540.23407"
+       y="368.5022"
+       style="font-size:16px;stroke-width:1.33333"><tspan
+         style="font-variant:normal;font-weight:normal;font-size:10.6667px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
          sodipodi:role="line"
-         id="tspan106">16.0</tspan></text>
+         id="tspan106"
+         x="540.23407"
+         y="368.5022">6.9</tspan></text>
     <text
        id="text107"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,639.4082,115.1855)"><tspan
-         style="font-variant:normal;font-weight:normal;font-size:8px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0 5.0879998 10.176 12.72"
-         y="0"
+       x="643.4082"
+       y="425.18549"
+       style="font-size:16px;stroke-width:1.33333"><tspan
+         style="font-variant:normal;font-weight:normal;font-size:10.6667px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
+         x="643.4082"
          sodipodi:role="line"
-         id="tspan107">16.8</tspan></text>
+         id="tspan107"
+         y="425.18549">4.6</tspan></text>
     <path
        id="path107"
        d="m 144.14375,384.0832 h 301.75 c 1.33333,0 2,0.66667 2,2 v 14 c 0,1.33333 -0.66667,2 -2,2 h -301.75 c -1.33333,0 -2,-0.66667 -2,-2 v -14 c 0,-1.33333 0.66667,-2 2,-2 z"
@@ -1116,15 +1128,15 @@
        xml:space="preserve"
        transform="matrix(1.3333333,0,0,1.3333333,533.525,61.199567)"><tspan
          style="font-variant:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0 7.6999998 10.48 15.69 19.610001 25.74 32.080002 37.580002"
-         y="0"
          sodipodi:role="line"
-         id="tspan114">Distance</tspan></text>
+         id="tspan114"
+         x="0"
+         y="0">Qos</tspan></text>
     <path
        id="path114"
        d="m 113.17437,31.2 h 23.21418 v 3.046154 h -23.21418 z"
        style="fill:#440154;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       transform="matrix(1.3333333,0,0,-1.3333333,0,581.41467)"
+       transform="matrix(1.3333333,0,0,-30.765295,0,1499.692)"
        clip-path="url(#clipPath115)" />
     <path
        id="path116"
@@ -1308,12 +1320,14 @@
     <text
        id="text139"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,157.8857,533.52396)"><tspan
-         style="font-variant:normal;font-weight:normal;font-size:8px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0 5.0879998 7.632"
-         y="0"
+       x="153.8857"
+       y="443.52399"
+       style="font-size:16px;stroke-width:1.33333"><tspan
+         style="font-variant:normal;font-weight:normal;font-size:10.6667px;font-family:'DejaVu Sans';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
+         x="153.8857"
+         y="443.52399"
          sodipodi:role="line"
-         id="tspan139">3.5</tspan></text>
+         id="tspan139">82.3</tspan></text>
     <text
        id="text140"
        xml:space="preserve"
@@ -1368,5 +1382,64 @@
          y="0"
          sodipodi:role="line"
          id="tspan145">1000 devices</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:center;text-anchor:middle;fill:#000000;stroke:#b31529;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;fill-opacity:1"
+       x="102.33842"
+       y="632.76044"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="102.33842"
+         y="632.76044"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none">Full Device</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:center;text-anchor:middle;fill:none;stroke:#b31529;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0"
+       x="399.44113"
+       y="632.10706"
+       id="text1-4"><tspan
+         sodipodi:role="line"
+         id="tspan1-7"
+         x="399.44113"
+         y="632.10706"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none">With Relocation</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:center;text-anchor:middle;fill:none;stroke:#b31529;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0"
+       x="676.92438"
+       y="632.76044"
+       id="text1-0"><tspan
+         sodipodi:role="line"
+         id="tspan1-3"
+         x="676.92438"
+         y="632.76044"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none">Full Cloud</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0"
+       d="M 317.70012,626.54109 H 205.54725"
+       id="path1" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0"
+       d="M 205.54725,626.54109 H 317.70012"
+       id="path2" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       d="m 190.83697,626.54109 105.47553,0"
+       id="path54"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       d="M 190.83697,626.54109 V 584.49756"
+       id="path55" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       d="M 496.86107,626.98039 H 602.3366"
+       id="path54-5"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       d="M 602.3366,626.98039 V 584.93686"
+       id="path55-9" />
   </g>
 </svg>

@@ -110,6 +110,18 @@
   - _Multiplatform_ support --- #fa-icon("java", fa-set: "Brands") #fa-icon("js", fa-set: "Brands") #fa-icon("android", fa-set: "Brands") #fa-icon("apple", fa-set: "Brands")
 ]
 
+
+#slide(title: "Middleware Architecture")[
+  #figure(
+    image("figs/new-pulverization-architecture.svg"),
+    // caption: "Middleware layers and the mapping between them in the architectural model"
+  )
+  // #figure(
+  //   image("figs/middleware-example-ac.png"),
+  //   caption: "Representation of a simple system composed of four logical devices."
+  // )
+]
+
 #slide(title: "Capabilities and Host Definition")[
   === Capability Definition
 
@@ -235,17 +247,6 @@
   - If properly designed, no *oscillatory* conditions
   - _Perturbations_ tolerated due to their *self-stabilizing* nature
   - Reconfigurations occur based on *global* conditions
-]
-
-#slide(title: "Middleware architecture")[
-  #figure(
-    image("figs/new-pulverization-architecture.svg"),
-    // caption: "Middleware layers and the mapping between them in the architectural model"
-  )
-  // #figure(
-  //   image("figs/middleware-example-ac.png"),
-  //   caption: "Representation of a simple system composed of four logical devices."
-  // )
 ]
 
 #slide(title: "Self-Integration")[
