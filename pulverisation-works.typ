@@ -126,7 +126,6 @@
   === Capability Definition
 
   ```kt
-  object HighMemory by Capability
   object MqttBroker by Capability
   object WithTemperatureSensor by Capability
   ```
@@ -135,7 +134,7 @@
 
   ```kt
   val embeddedDevice = Host("raspberry", WithTemperatureSensor)
-  val cloudServer = Host("AWS", HighMemory, MqttBroker)
+  val cloudServer = Host("AWS", MqttBroker)
   ```
 ]
 
@@ -150,8 +149,8 @@
 
   val configuration = pulverized {
     val temperatureDevice by logicDevice {
-      withBehavior<TemperatureCollector> requires HighCPU
-      withCommunication<PeerToPeerComm> requires LowLatencyComm
+      withBehavior<TemperatureCollector>
+      withCommunication<PeerToPeerComm> requires MqttBroker
       withSensors<TemperatureSensor> requires WithTemperatureSensor
     }
   }
