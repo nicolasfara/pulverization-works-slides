@@ -10,7 +10,7 @@
 
 #set text(font: "Inter", weight: "light", size: 20pt)
 #show math.equation: set text(font: "Fira Math")
-#set strong(delta: 150)
+#set strong(delta: 350)
 #set par(justify: true)
 
 #set quote(block: true)
@@ -205,9 +205,42 @@
   )
 ]
 
-#slide(title: "Simulation Results")[
+#slide(title: "Simulation Results - Traveled Distance")[
   #figure(
-    image("figs/cloud_cost-device_consumption-cloud_consumption-distance-device=1000-1.svg"),
+    image("figs/travel_distance.svg")
+    // image("figs/cloud_cost-device_consumption-cloud_consumption-distance-device=1000-1.svg"),
+    // caption: "Simulation results with 1000 devices"
+  )
+]
+
+#slide(title: "Simulation Results - Cloud Cost and Recharging Time")[
+  #table(
+    columns: (1fr, 1fr),
+    align: horizon,
+    stroke: none,
+    inset: 1em,
+    [
+      #figure(
+        image("figs/cloud_cost.svg")
+      )
+    ],
+    [
+      #figure(
+        image("figs/charging_time.svg")
+      )
+    ]
+  )
+  // #figure(
+  //   image("figs/travel_distance.svg")
+  //   // image("figs/cloud_cost-device_consumption-cloud_consumption-distance-device=1000-1.svg"),
+  //   // caption: "Simulation results with 1000 devices"
+  // )
+]
+
+#slide(title: "Simulation Results - Power Consumption")[
+  #figure(
+    image("figs/power_consumption.svg")
+    // image("figs/cloud_cost-device_consumption-cloud_consumption-distance-device=1000-1.svg"),
     // caption: "Simulation results with 1000 devices"
   )
 ]
@@ -298,19 +331,74 @@
   )
 ]
 
-// #new-section-slide("Work in Progress")
+#new-section-slide("Work in Progress")
 
-// #slide(title: "Coordination of Multi-tier Field-based Applications")[
-//   #figure(
-//     image("figs/macro-system-definition.svg")
-//   )
-// ]
+#slide(title: "Coordination of Multi-tier Field-based Applications")[
+  In the ECC, not all the devices have the capabilities to run the same _macroprogram_:
 
-// // #slide(title: "Deployment Mapping")[
-// //   #figure(
-// //     image("figs/deployment-mapping-diagram-img.svg")
-// //   )
-// // ]
+  - *Embedded devices* have _limited computational resources_
+  - *Smartphone* and *wearable* are _battery-constrained_
+  - *Cloud instances* are not equipped with sensors
+
+  Partitioning the _macroprogram_ into *components* enables the independent deployment of each component on the most suitable device.
+
+  #v(1em)
+
+  #alert[
+    #align(center)[
+      #pad(x: 2.5em)[
+        How can we deploy and manage *field-based* applications in a heterogeneous *multi-tier* environment?
+      ]
+    ]
+  ]
+]
+
+#slide(title: "System Model")[
+  === Physical System
+
+  Network of _physical devices_ $#math.delta #math.in D_P$ which are assumed to exchange messages according to a *_physical neighbourhood_* relation $#math.Nu _P$.
+
+  === Macroprogram
+
+  Program is executed by a subset of _physical devices_ $D$ called *_application devices_*.
+  The neighborhood relation of *_application device_* is a subset of $#math.Nu _P$
+
+  === Infrastructural Devices
+
+  We define *_infrastructural devices_* $D_I$ as the devices that can support the execution of some components on behalf of the *_application devices_*, where $D_I #math.subset.eq D_p$.
+  A device may be equipped with sensors $#math.sigma$.
+]
+
+#slide(title: "System Model Properties")[
+
+  From the system model, we provide the following properties:
+    
+  - We assume $D$ and $D_I$ to be fixed
+  - $D #math.sect D_I$ may be non-empty
+  - $D #math.union D_I = D_P$
+  - $#math.Nu _P$ may dynamically change (node mobility)
+]
+
+#slide(title: "System Definition - Rescue System")[
+  #figure(
+    image("figs/macro-system-definition-2.svg")
+  )
+]
+
+#slide(title: "Deployment Mapping")[
+  #figure(
+    image("figs/deployment-mapping-diagram-2.svg")
+  )
+]
+
+#slide(title: "Experiment Results")[
+  #figure(
+    image("figs/gradient_convergence.svg")
+  )
+  #figure(
+    image("figs/power_consumption_mt.svg")
+  )
+]
 
 #slide[
   #bibliography("bibliography.bib")
