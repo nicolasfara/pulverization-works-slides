@@ -34,10 +34,10 @@ jobs:
           sudo mv fontawesome-free-6.4.2-desktop /usr/share/fonts
           sudo fc-cache -fv
         
-      - uses: yusancky/setup-typst@v3.0.0
+      - uses: typst-community/setup-typst@v4.2.0
         id: setup-typst
         with:
-          version: 'v0.10.0'
+          typst-version: 'v0.10.0'
 
       - name: build document
         run: typst compile pulverisation-works.typ
